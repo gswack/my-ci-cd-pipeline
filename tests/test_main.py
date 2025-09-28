@@ -1,12 +1,12 @@
 # tests/test_main.py
-from app.main import home
+from app.main import app
 from datetime import datetime
 import io
 import sys
 
 
 def test_home_route():
-    with home.test_client() as client: 
+    with app.test_client() as client: 
         response = client.get('/')
         assert response.status_code == 200
         assert "Hello, received request from ip" in response.data.decode()

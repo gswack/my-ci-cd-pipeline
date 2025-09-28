@@ -32,6 +32,7 @@ def health():
 def not_found(e):
     return "Page not found", 404
 
+
 @app.errorhandler(500)
 def internal_error(e):
     return "Internal server error", 500
