@@ -14,7 +14,7 @@ def home():
     try: 
         timestamp = datetime.datetime.now().isoformat()
         client_ip = request.remote_addr
-        message = f"recieved request from ip {client_ip} @{timestamp}"
+        message = f"received request from ip {client_ip} @{timestamp}"
         logging.info(message)
         return f"Hello, {message}"
     except Exception as e:
