@@ -36,7 +36,8 @@ jobs:
         pip install pytest
 
     - name: Run tests
-      run: pytest tests/
+      run: PYTHONPATH=. pytest
+      # run: pytest tests/
 
 # TODO add pytest before building docker image
 # split CI and CD into separate jobs 
